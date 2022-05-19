@@ -58,7 +58,7 @@ const Home: NextPage = ({ data }: any) => {
 // This gets called on every request
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`${config.api_url}/balen-vs-sthapit`)
+  const res = await fetch(`${config.api_url}/api/balen-vs-sthapit`)
   const data = await res.json()
 
   // Pass data to the page via props

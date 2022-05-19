@@ -1,9 +1,7 @@
-"use strict"
-
-const puppeteer = require("puppeteer-core")
 const chromium = require("chrome-aws-lambda")
+const puppeteer = require("puppeteer-core")
 
-exports.handler = async (event, context) => {
+module.exports = async (event, context, callback) => {
     // 1. Launch a new browser
     const browser = await puppeteer.launch({
         // Required
@@ -20,7 +18,7 @@ exports.handler = async (event, context) => {
     await page.setViewport({ width: 390, height: 600 })
 
     // 3. Navigate to the given URL
-    await page.goto("https://local-election.vercel.app/", { waitUntil: "networkidle2" })
+    await page.goto("https://balen-vs-sthapit.netlify.app/", { waitUntil: "networkidle2" })
 
     // 4. Take screenshot
     const screenshot = await page.screenshot({

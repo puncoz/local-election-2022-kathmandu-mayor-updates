@@ -1,7 +1,7 @@
 const chromium = require("chrome-aws-lambda")
 const puppeteer = require("puppeteer-core")
 
-module.exports = async (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
     // 1. Launch a new browser
     const browser = await puppeteer.launch({
         // Required

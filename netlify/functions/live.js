@@ -40,6 +40,7 @@ exports.handler = async (event, context, callback) => {
         headers: {
             "Content-Type": "image/jpeg",
         },
-        body: screenshot,
-    }
+        body: screenshot.toString("base64"),
+        isBase64Encoded: true,
+}
 }

@@ -1,9 +1,14 @@
+import chromium                            from "chrome-aws-lambda"
 import { NextApiRequest, NextApiResponse } from "next"
 import puppeteer                           from "puppeteer"
 import { config }                          from "../../config/config"
 
 const Image = async (req: NextApiRequest, res: NextApiResponse) => {
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({
+        args: chromium.args,
+        executablePath: await chromium.executablePath,
+        headless: chromium.headless,
+    })
     const page = await browser.newPage()
     await page.setViewport({ width: 390, height: 600 })
     await page.goto(config.api_url, { waitUntil: "networkidle2" })

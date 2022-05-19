@@ -42,5 +42,5 @@ exports.handler = async (event, context, callback) => {
         },
         body: screenshot.toString("base64"),
         isBase64Encoded: true,
-}
+    }
 }

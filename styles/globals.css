@@ -1,16 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;900&display=swap");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	padding: 0;
+	margin: 0;
+	font-family: "Kanit", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	color: #020826;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.left {
+	background-color: #eaddcf;
+}
+
+.left h2 {
+	font-size: 4vw;
+	font-weight: 600;
+	text-align: center;
+	color: rgb(2 8 38 / 60%);
+}
+
+.left p {
+	font-size: 26vh;
+	font-weight: 500;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	color: #304a8f;
+}
+
+.right {
+	background-color: #46455a;
+}
+
+.right h2 {
+	font-size: 4vw;
+	font-weight: 600;
+	text-align: center;
+	color: rgb(255 255 255 / 60%);
+}
+
+.right p {
+	font-size: 26vh;
+	font-weight: 500;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	color: #a6d58f;
+}
+
+img {
+	width: 200px;
+	height: 200px;
+	top: 10%;
+	border-radius: 50%;
+	border: 4px solid #fff;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.versus-img {
+	top: 50%;
+	transform: translateY(-50%);
 }

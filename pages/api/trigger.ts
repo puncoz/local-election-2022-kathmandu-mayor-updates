@@ -45,8 +45,8 @@ const Trigger = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
         console.log(title === "Mayor", title === "Deputy Mayor", title)
 
         items.each((index, itemEl) => {
-            const name = $(itemEl).find(".candidate-name").text()
-            const votes = $(itemEl).find(".vote-numbers").text() || "0"
+            const name = $(itemEl).find(".candidate-name").text().trim()
+            const votes = $(itemEl).find(".vote-numbers").text().trim() || "0"
 
             data[title].push({
                 name,
